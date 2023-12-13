@@ -1,0 +1,45 @@
+SYN攻击防护 SynAttackProtect：
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"SynAttackProtect"=dword:00000001
+
+检查TCP连接请求阈值:
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpMaxPortsExhausted"=dword:0005
+
+TCP连接最大重发次数 TcpMaxConnectResponseRetransmissions
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpMaxConnectResponseRetransmissions"=dword:00000002
+
+
+检查处于SYN_RCVD状态下的TCP连接阈值
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpMaxHalfOpen"=dword:001f4
+
+检查处于SYN_RCVD状态下,且至少已经进行了一次重新传输的TCP连接阈值
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpMaxHalfOpenRetried"=dword:00190
+
+检查是否已启用并正确配置ICMP攻击保护
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"EnableDeadGWDetect"=dword:000
+
+检查是否已正确配置重传单独数据片段的次数
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpMaxDataRetransmissions"=dword:002
+
+检查是否已禁用路由发现功能
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"PerformRouterDiscovery"=dword:000
+
+保持连接时间 KeepAliveTime：
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"KeepAliveTime"=dword:300000
+
+检查是否已启用并正确配置TCP碎片攻击保护
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"EnablePMTUDiscovery"=dword:0000
+
+
+
+
+
