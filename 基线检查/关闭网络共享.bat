@@ -1,6 +1,6 @@
 @echo off
 net share
-echo �Ƿ�ɾ��Ĭ�Ϲ����ļ��У�������������ɾ�����˳���رա�
+echo 是否删除默认共享文件夹，按任意键则继续删除，退出请关闭。
 echo;
 pause
 net share c$ /del
